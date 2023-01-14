@@ -11,7 +11,9 @@ const UrlShortener = () => {
     const { data } = await axios.post("https://url.yashasva.in/short", { url });
     setShortUrl(data.data);
   };
-  const copyHandler = (event) => {};
+  const copyHandler = async (event) => {
+    await navigator.clipboard.writeText(shortUrl);
+  };
   return (
     <div>
       <div class="mt-14 mx-auto absolute left-2 right-2">
@@ -41,8 +43,8 @@ const UrlShortener = () => {
           <p>{shortUrl}</p>
         </div>
         <div
-          class="absolute -right-4 top-0 items-center pointer-events-none"
-          onClick={() => copyHandler()}
+          class="absolute -right-4 top-0 items-center cursor-pointer"
+          onClick={copyHandler}
         >
           <img src={copy_image} alt="copy content" class="w-1/2" />
         </div>
