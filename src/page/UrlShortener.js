@@ -17,7 +17,7 @@ const UrlShortener = () => {
   return (
     <div>
       <div class="mt-14 mx-auto absolute left-2 right-2">
-        <h1 class="text-white text-5xl font-mono">Make Your Url Short</h1>
+        <h1 class="text-white text-5xl font-sans tracking-widest">Make Your URLs Shorter</h1>
       </div>
 
       <div class="relative w-[270px] md:w-1/2 mx-auto">
@@ -35,12 +35,12 @@ const UrlShortener = () => {
           Shorten URL
         </button>
       </div>
-      <div class="relative mx-auto bg-green-600 w-[270px] xl:w-1/4 lg:w-1/3 md:w-1/2 sm:w-1/2 h-7 my-10 rounded-md">
+      <div class="relative mx-auto bg-slate-600 w-[270px] xl:w-1/4 lg:w-1/3 md:w-1/2 sm:w-1/2 h-7 my-10 rounded-md">
         <div
           class="w-[270px] lg:w-1/4 md:w-1/2 sm:w-1/2 text-base text-gray-200 absolute -left-2 md:left-4"
           ref={textAreaRef}
         >
-          <p>{shortUrl}</p>
+          <p className="w-full font-mono">{shortUrl}</p>
         </div>
         <div
           class="absolute -right-4 top-0 items-center cursor-pointer"
