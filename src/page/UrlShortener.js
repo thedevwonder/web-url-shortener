@@ -1,21 +1,36 @@
 import axios from "axios";
 import React, { useRef, useState } from "react";
+import { ToastMessage } from "../components/toast";
 import { default as copy_image } from "../copy_content.png";
 
 const UrlShortener = () => {
   const [url, setUrl] = useState("");
   const [shortUrl, setShortUrl] = useState("");
   const textAreaRef = useRef(null);
+  const [isNotication, setIsNotification] = useState(false)
+
+  const openNotification = () => {
+    setIsNotification(true)
+    setTimeout(()=>{
+      setIsNotification(false)
+    }, 5000)
+  }
+
+  const closeNotification = () => {
+    setIsNotification(false)
+  }
 
   const fetchShortUrl = async () => {
     const { data } = await axios.post("https://url.yashasva.in/short", { url });
     setShortUrl(data.data);
+    openNotification
   };
   const copyHandler = async (event) => {
     await navigator.clipboard.writeText(shortUrl);
   };
   return (
-    <div>
+    <div> 
+      <ToastMessage/>
       <div class="mt-14 mx-auto absolute left-2 right-2">
         <h1 class="text-white text-5xl font-sans tracking-widest">Make Your URLs Shorter</h1>
       </div>
