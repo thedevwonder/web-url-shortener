@@ -599,6 +599,34 @@ video {
   bottom: 2rem;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
+.top-1 {
+  top: 0.25rem;
+}
+
+.-left-2\.5 {
+  left: -0.625rem;
+}
+
+.-left-3 {
+  left: -0.75rem;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.-right-5 {
+  right: -1.25rem;
+}
+
+.top-0\.5 {
+  top: 0.125rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -607,11 +635,6 @@ video {
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
-}
-
-.my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
 }
 
 .mt-14 {
@@ -654,6 +677,26 @@ video {
   width: 50%;
 }
 
+.w-\[300px\] {
+  width: 300px;
+}
+
+.w-\[280px\] {
+  width: 280px;
+}
+
+.w-\[275px\] {
+  width: 275px;
+}
+
+.w-\[260px\] {
+  width: 260px;
+}
+
+.w-\[290px\] {
+  width: 290px;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -675,24 +718,9 @@ video {
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
 
-.bg-green-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
-}
-
 .bg-slate-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(71 85 105 / var(--tw-bg-opacity));
-}
-
-.bg-blue-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
-}
-
-.bg-blue-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r {
@@ -722,28 +750,12 @@ video {
   text-align: left;
 }
 
-.indent-2 {
-  text-indent: 0.5rem;
-}
-
-.indent-8 {
-  text-indent: 2rem;
-}
-
-.font-mono {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
 .font-sans {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.font-serif {
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-}
-
-.font-\[\'Ubuntu\'\] {
-  font-family: 'Ubuntu';
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .text-5xl {
@@ -761,8 +773,16 @@ video {
   line-height: 1.5rem;
 }
 
-.tracking-wide {
-  letter-spacing: 0.025em;
+.text-\[10px\] {
+  font-size: 10px;
+}
+
+.text-\[6px\] {
+  font-size: 6px;
+}
+
+.text-\[3px\] {
+  font-size: 3px;
 }
 
 .tracking-widest {
@@ -786,24 +806,6 @@ video {
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
-
-.drop-shadow {
-  --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
-  -webkit-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-          filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.drop-shadow-md {
-  --tw-drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
-  -webkit-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-          filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.drop-shadow-2xl {
-  --tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
-  -webkit-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-          filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 body {
@@ -841,6 +843,10 @@ code {
 @media (min-width: 640px) {
   .sm\:w-1\/2 {
     width: 50%;
+  }
+
+  .sm\:w-\[250px\] {
+    width: 250px;
   }
 }
 

@@ -35,15 +35,15 @@ const UrlShortener = () => {
           Shorten URL
         </button>
       </div>
-      <div class="relative mx-auto bg-slate-600 w-[270px] xl:w-1/4 lg:w-1/3 md:w-1/2 sm:w-1/2 h-7 my-10 rounded-md">
+      <div class="relative mx-auto bg-slate-600 w-[300px] xl:w-1/4 lg:w-1/3 md:w-1/2 sm:w-1/2 h-7 my-10 rounded-md">
         <div
-          class="w-[270px] lg:w-1/4 md:w-1/2 sm:w-1/2 text-base text-gray-200 absolute -left-2 md:left-4"
+          class="w-[300px] top-1 lg:w-1/4 md:w-1/2 sm:w-1/2 text-base text-gray-200 absolute -left-3 md:left-4"
           ref={textAreaRef}
         >
-          <p className="w-full font-mono">{shortUrl}</p>
+          <p className="font-mono text-sm">{shortUrl}</p>
         </div>
         <div
-          class="absolute -right-4 top-0 items-center cursor-pointer"
+          class="absolute -right-5 top-0.5 items-center cursor-pointer"
           onClick={copyHandler}
         >
           <img src={copy_image} alt="copy content" class="w-1/2" />
