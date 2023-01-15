@@ -30,7 +30,7 @@ const UrlShortener = () => {
         />
         <button
           class="absolute bg-blue-500 text-white h-10 w-24 rounded-lg text-sm right-1 bottom-1"
-          onClick={() => fetchShortUrl()}
+          onClick={fetchShortUrl}
         >
           Shorten URL
         </button>
