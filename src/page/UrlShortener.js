@@ -8,7 +8,14 @@ const UrlShortener = () => {
   const textAreaRef = useRef(null);
 
   const fetchShortUrl = async () => {
-    const { data } = await axios.post("https://url.yashasva.in/short", { url });
+    const params = new URLSearchParams();
+    const body = { url };
+    params.append("JSONString", JSON.stringify(body));
+    const { data } = await axios.post("https://url.yashasva.in/short", params, {
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+    });
     setShortUrl(data.data);
   };
   const copyHandler = async (event) => {
@@ -17,7 +24,9 @@ const UrlShortener = () => {
   return (
     <div>
       <div class="mt-14 mx-auto absolute left-2 right-2">
-        <h1 class="text-white text-5xl font-sans tracking-widest">Make Your URLs Shorter</h1>
+        <h1 class="text-white text-5xl font-sans tracking-widest">
+          Make Your URLs Shorter
+        </h1>
       </div>
 
       <div class="relative w-[270px] md:w-1/2 mx-auto">
