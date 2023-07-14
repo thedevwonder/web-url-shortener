@@ -11,7 +11,7 @@ const UrlShortener = () => {
     const params = new URLSearchParams();
     const body = { url };
     params.append("JSONString", JSON.stringify(body));
-    const { data } = await axios.post("https://url.yashasva.in/short", params, {
+    const { data } = await axios.post("https://robin-short-url.onrender.com", params, {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
