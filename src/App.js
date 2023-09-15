@@ -1,3 +1,4 @@
+import "semantic-ui-css/semantic.min.css";
 import "./App.css";
 
 import React from "react";
@@ -5,10 +6,18 @@ import { UrlShortener } from "./page";
 
 function App() {
   return (
-    <div className="App bg-gradient-to-r from-gray-700 via-gray-900 to-black ... h-screen">
+    <div
+      style={{
+        width: "100%",
+        height: "1000px",
+        backgroundColor: "#161b22",
+        position: "fixed",
+      }}
+    >
       <UrlShortener />
     </div>
   );
 }
 
 export default App;
+//
